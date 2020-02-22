@@ -1,0 +1,25 @@
+{
+  "name": "linkshort",
+  "version": "1.0.0",
+  "description": "Link Shortener",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qpixel/LinkShort.git"
+  },
+  "author": "Riley Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qpixel/LinkShort/issues"
+  },
+  "homepage": "https://github.com/qpixel/LinkShort#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2",
+    "shortid": "^2.2.15",
+    "valid-url": "^1.0.9"
+  }
+}
