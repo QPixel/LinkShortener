@@ -5,7 +5,7 @@ const shortid = require('shortid');
 const errorUrl = 'https://localhost/error';
 module.exports = app => {
     //GET API for redirecting to orginalurl
-    app.get("/api/item:code", async (req,res) => {
+    app.get("/api/item/:code", async (req,res) => {
         const urlCode = req.params.code;
         const item = await UrlShorten.findOne({ urlCode: urlCode});
         if (item) {
@@ -42,6 +42,7 @@ module.exports = app => {
                         updatedAt
                     });
                     await item.save();
+                    console.log(item)
                     res.status(200).json(item);
                 }
             } catch (err) {
